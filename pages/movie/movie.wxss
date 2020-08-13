@@ -1,0 +1,61 @@
+.movie-page {
+  position: relative;
+  padding: 0 25rpx;
+}
+
+.movie-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 300rpx;
+  background: #4eeaab;
+}
+
+.movie-container {
+  position: relative;
+  max-height: 100vh;
+  border-radius: 16rpx 16rpx 0 0;
+  background: #fff;
+  overflow: auto;
+}
+
+.movie-item {
+  position: relative;
+  height: 160rpx;
+}
+
+.item-idx {
+  position: absolute;
+  top: 0;
+  left: 25rpx;
+  width: 60rpx;
+  height: 160rpx;
+  line-height: 160rpx;
+  color: #454563;
+  font-weight: bold;
+}
+
+.item-name {
+  display: block;
+  padding-left: 85rpx;
+  line-height: 160rpx;
+  color: #454563;
+  font-size: large;
+}
+
+.item-money {
+  position: absolute;
+  top: 0;
+  right: 25rpx;
+  width: 160rpx;
+  height: 160rpx;
+  line-height: 160rpx;
+  text-align: right;
+  color: #ff9400;
+  font-weight: bold;
+}
+
+.movie-item:nth-of-type(odd) {
+  background: #f8f6f7;
+}

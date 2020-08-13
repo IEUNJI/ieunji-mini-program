@@ -1,0 +1,10 @@
+<view class="movie-page">
+	<view class="movie-bg"></view>
+	<view class="movie-container">
+		<view class="movie-item" wx:for="{{list}}" wx:key="index">
+			<text class="item-idx">{{index}}</text>
+			<text class="item-name">{{item.movieInfo.movieName}}</text>
+			<text class="item-money">{{item.boxSplitUnit.num}}{{item.boxSplitUnit.unit}}</text>
+		</view>
+	</view>
+</view>

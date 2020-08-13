@@ -1,0 +1,35 @@
+{
+  "pages": [
+    "pages/movie/movie",
+    "pages/tv/tv"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#4eeaab",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "IEUNJI"
+  },
+  "tabBar": {
+    "color": "#454563",
+    "selectedColor": "#4eeaab",
+    "backgroundColor": "#ffffff",
+    "list": [{
+        "pagePath": "pages/movie/movie",
+        "text": "电影票房",
+        "iconPath": "images/icon-movie.png",
+        "selectedIconPath": "images/icon-movie.png"
+      },
+      {
+        "pagePath": "pages/tv/tv",
+        "text": "电视收视",
+        "iconPath": "images/icon-tv.png",
+        "selectedIconPath": "images/icon-tv.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "useExtendedLib": {
+    "weui": true
+  },
+  "sitemapLocation": "sitemap.json"
+}
