@@ -1,6 +1,7 @@
 Page({
   data: {
-    list: []
+    list: [],
+    timer: null
   },
   queryMovieList() {
     wx.request({
@@ -10,22 +11,27 @@ Page({
         riskLevel: 71,
         optimusCode: 10
       },
-      success: ({
-        data,
-        statusCode
-      }) => {
-        if (statusCode === 200) {
-          const {
-            list
-          } = data.movieList;
-          this.setData({
-            list
-          });
-        }
+      success: ({ data }) => {
+        const { list } = data.movieList;
+        this.setData({
+          list
+        });
+      },
+      complete: () => {
+        const timer = setTimeout(() => {
+          clearTimeout(this.data.timer);
+          this.queryMovieList();
+        }, 2000);
+        this.setData({
+          timer
+        });
       }
     });
   },
   onShow() {
     this.queryMovieList();
+  },
+  onHide() {
+    clearTimeout(this.data.timer);
   }
 });
